@@ -23,7 +23,6 @@ export const uploadImages = async (req, res) => {
       .status(400)
       .json(customResponses.badResponse(400, "No se subió ningún archivo"));
   }
-  console.log(file);
   const date = new Date().getTime();
   const uniqueKey = `${
     file.fieldname + "-" + date + extname(file.originalname)
