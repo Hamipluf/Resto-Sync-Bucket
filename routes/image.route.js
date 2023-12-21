@@ -15,7 +15,7 @@ const router = new Router();
 // Subir una imagen a AWS S3
 router.post(
   "/upload",
-  passport.authenticate("JWT", { session: false }),
+  passport.authenticate("JWT", { session: false, passReqToCallback: true }),
   isAutorizedUser,
   upload.single("image"),
   uploadImages

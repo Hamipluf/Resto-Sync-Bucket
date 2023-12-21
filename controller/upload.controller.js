@@ -4,9 +4,6 @@ dotenv.config();
 import customResponses from "../utils/customResponses.js";
 // DAOs
 import ImageManager from "../persistencia/DAOs/images.s3.js";
-import { client } from "../persistencia/awsS3.js";
-// S3
-import { ListObjectsV2Command } from "@aws-sdk/client-s3";
 // Path
 import { extname } from "path";
 const imageManager = new ImageManager();
